@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Testing mediaelementjs</title>
+	<link rel="stylesheet" href="">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="mediaelement/build/mediaelementplayer.css" rel="stylesheet">
+	<style type="text/css">
+		.active-cue {background: yellow;}
+	</style>
+</head>
+
+<body>
+	<article>
+<audio class="mejs__player">
+    <source src="mp3_64k/NO_01K.mp3" type="audio/mp3"/>
+    <source src="ogg_64k/NO_01K.ogg" type="audio/ogg"/>
+    <track kind="captions" src="01k.no.vtt" srclang="no" label="Norsk"/>
+    <track kind="chapters" src="01k.no.chapters.vtt" srclang="no" label="Norsk"/>
+</audio>
+
+<div class="row">
+	<div class="col-xs-12 col-md-4">
+		<div class="cues">
+		    <p data-key="1">
+		        <span class="cue" data-line="1" data-begin="00:00:00.010" data-end="00:00:03.390">Det kommer et romskip.</span>
+		    </p>
+		    <p data-key="2">
+		        <span class="cue" data-line="2" data-begin="00:00:03.390" data-end="00:00:06.520">Jenny er ei jente.</span>
+		        <span class="cue" data-line="3" data-begin="00:00:06.520" data-end="00:00:09.630">Samir er en gutt.</span>
+		        <span class="cue" data-line="5" data-begin="00:00:09.690" data-end="00:00:14.520">De er venner. De har en hage</span>
+		    </p>
+		    <p data-key="3">
+		        <span class="cue" data-line="8" data-begin="00:00:14.520" data-end="00:00:17.860">- Sukkererter er godt, sa Jenny.</span>
+		        <span class="cue" data-line="9" data-begin="00:00:17.860" data-end="00:00:22.400">- Vi kan så frø, så får vi mange.</span>
+		        <span class="cue" data-line="10" data-begin="00:00:22.400" data-end="00:00:26.840">- Kræsj! Brak! Brekk! Knus!</span>
+		        <span class="cue" data-line="11" data-begin="00:00:26.840" data-end="00:00:30.180">Noe stort landet i treet.</span>
+		        <span class="cue" data-line="12" data-begin="00:00:30.180" data-end="00:00:32.500">Det var ei kule.</span>
+		        <span class="cue" data-line="13" data-begin="00:00:32.500" data-end="00:00:34.860">Var den av glass?</span>
+		        <span class="cue" data-line="14" data-begin="00:00:34.860" data-end="00:00:37.000">Var den farlig?</span>
+		    </p>
+		    <p data-key="4">
+		        <span class="cue" data-line="15" data-begin="00:00:37.000" data-end="00:00:39.470">Noe falt ut.</span>
+		        <span class="cue" data-line="16" data-begin="00:00:39.470" data-end="00:00:42.700">En person hang i ei grein.</span>
+		        <span class="cue" data-line="17" data-begin="00:00:42.700" data-end="00:00:46.430">- En rar person, sa Jenny lavt.</span>
+		        <span class="cue" data-line="18" data-begin="00:00:46.430" data-end="00:00:50.560">- Den har lange ører som en rev!</span>
+		        <span class="cue" data-line="19" data-begin="00:00:50.560" data-end="00:00:55.420">- En rar katt, sa Samir stille.</span>
+		        <span class="cue" data-line="20" data-begin="00:00:55.420" data-end="00:00:57.900">- Den har sko!</span>
+		    </p>
+		    <p data-key="5">
+		        <span class="cue" data-line="21" data-begin="00:00:57.900" data-end="00:01:00.900">Personen hoppet ned.</span>
+		        <span class="cue" data-line="22" data-begin="00:01:00.900" data-end="00:01:03.520">Katta hoppet ned.</span>
+		        <span class="cue" data-line="23" data-begin="00:01:03.520" data-end="00:01:06.840">Personen la handa over hjertet sitt</span>
+		        <span class="cue" data-line="24" data-begin="00:01:06.840" data-end="00:01:10.520">og sa: - Ikke vær redde.</span>
+		        <span class="cue" data-line="25" data-begin="00:01:10.520" data-end="00:01:13.200">Vi kommer i fred.</span>
+		    </p>
+		    <p data-key="6">
+		        <span class="cue" data-line="26" data-begin="00:01:13.200" data-end="00:01:15.680">- Jeg heter Hen.</span>
+		        <span class="cue" data-line="27" data-begin="00:01:15.680" data-end="00:01:17.870">Dette er Katt.</span>
+		        <span class="cue" data-line="28" data-begin="00:01:17.870" data-end="00:01:20.240">Vi har reist langt.</span>
+		        <span class="cue" data-line="29" data-begin="00:01:20.240" data-end="00:01:22.300">Vi har reist forbi</span>
+		        <span class="cue" data-line="30" data-begin="00:01:22.300" data-end="00:01:26.170">Neptun, Uranus, Saturn,</span>
+		        <span class="cue" data-line="31" data-begin="00:01:26.170" data-end="00:01:28.980">Jupiter og Mars.</span>
+		    </p>
+		    <p data-key="7">
+		        <span class="cue" data-line="32" data-begin="00:01:28.980" data-end="00:01:32.880">- Hvor kommer dere fra? spurte Samir.</span>
+		        <span class="cue" data-line="33" data-begin="00:01:32.880" data-end="00:01:36.020">- Fra planeten Mo-lo.</span>
+		        <span class="cue" data-line="34" data-begin="00:01:36.020" data-end="00:01:37.760">Vi har vann.</span>
+		        <span class="cue" data-line="35" data-begin="00:01:37.760" data-end="00:01:41.310">Vi kan snakke og forstå alle språk.</span>
+		        <span class="cue" data-line="36" data-begin="00:01:41.310" data-end="00:01:45.720">Sola vår heter Proxima Centauri.</span>
+		    </p>
+		    <p data-key="8">
+		        <span class="cue" data-line="37" data-begin="00:01:45.720" data-end="00:01:50.110">- Den kula der er vel ikke sterk, sa Samir.</span>
+		        <span class="cue" data-line="38" data-begin="00:01:50.110" data-end="00:01:52.040">- Jo, sa Hen.</span>
+		        <span class="cue" data-line="39" data-begin="00:01:52.040" data-end="00:01:56.300">- Den er laget av gzi-gzy fra et fjell.</span>
+		        <span class="cue" data-line="40" data-begin="00:01:56.300" data-end="00:02:01.260">Gzi-gzy betyr mu-lig på deres språk.</span>
+		        <span class="cue" data-line="41" data-begin="00:02:01.260" data-end="00:02:04.600">Vi har reist med mu-lig.</span>
+		    </p>
+		    <p data-key="9">
+		        <span class="cue" data-line="42" data-begin="00:02:04.600" data-end="00:02:07.320">- Ta på disse brillene, sa Hen.</span>
+		        <span class="cue" data-line="43" data-begin="00:02:07.320" data-end="00:02:11.040">- De er laget av fjellet gzi-gzy.</span>
+		        <span class="cue" data-line="44" data-begin="00:02:11.040" data-end="00:02:13.610">Jenny tok på seg brillene.</span>
+		        <span class="cue" data-line="45" data-begin="00:02:13.610" data-end="00:02:16.200">Samir tok på seg brillene.</span>
+		    </p>
+		    <p data-key="10">
+		        <span class="cue" data-line="46" data-begin="00:02:16.200" data-end="00:02:20.130">- Jeg ser et stort dyr! ropte Samir.</span>
+		        <span class="cue" data-line="47" data-begin="00:02:20.130" data-end="00:02:23.660">Det er gult og brunt og har pels!</span>
+		        <span class="cue" data-line="48" data-begin="00:02:23.660" data-end="00:02:26.520">En bjørn som kan fly!</span>
+		    </p>
+		    <p data-key="11">
+		        <span class="cue" data-line="49" data-begin="00:02:26.520" data-end="00:02:30.200">- Nå bader den i en stor blomst!</span>
+		        <span class="cue" data-line="50" data-begin="00:02:30.200" data-end="00:02:33.480">Blomsten drysser gult støv på den!</span>
+		        <span class="cue" data-line="51" data-begin="00:02:33.480" data-end="00:02:36.830">- Støvet er pollen, sa Hen.</span>
+		        <span class="cue" data-line="52" data-begin="00:02:36.830" data-end="00:02:39.770">- Det kommer fra hannblomster.</span>
+		        <span class="cue" data-line="53" data-begin="00:02:39.770" data-end="00:02:43.790">Eller gutter, hvis du skjønner det bedre.</span>
+		    </p>
+		    <p data-key="12">
+		        <span class="cue" data-line="54" data-begin="00:02:43.790" data-end="00:02:46.820">- Nå sitter den på en gul blomst</span>
+		        <span class="cue" data-line="55" data-begin="00:02:46.820" data-end="00:02:49.720">på treet her! sa Jenny og pekte.</span>
+		        <span class="cue" data-line="56" data-begin="00:02:49.720" data-end="00:02:54.690">Det er hundre gule stilker med kuler på.</span>
+		        <span class="cue" data-line="57" data-begin="00:02:54.690" data-end="00:02:58.190">- Kulene har pollen, sa Hen.</span>
+		    </p>
+		    <p data-key="13">
+		        <span class="cue" data-line="58" data-begin="00:02:58.190" data-end="00:03:02.020">- Mellom stilkene er det små grønne krukker,</span>
+		        <span class="cue" data-line="59" data-begin="00:03:02.020" data-end="00:03:04.960">sa Jenny. – Bjørnen har snabel.</span>
+		        <span class="cue" data-line="60" data-begin="00:03:04.960" data-end="00:03:08.290">Nå suger den vann fra de grønne kulene.</span>
+		        <span class="cue" data-line="61" data-begin="00:03:08.290" data-end="00:03:13.940">- Det er sukker-vann, sa Hen. – Nektar. Mat.</span>
+		    </p>
+		    <p data-key="14">
+		        <span class="cue" data-line="62" data-begin="00:03:13.940" data-end="00:03:17.670">- Bjørn med snabel og vinger, lo Samir.</span>
+		        <span class="cue" data-line="63" data-begin="00:03:17.670" data-end="00:03:20.050">- Er det en elefantbjørn?</span>
+		        <span class="cue" data-line="64" data-begin="00:03:20.050" data-end="00:03:24.060">- Blomsten rister gult støv på dyret, sa Jenny.</span>
+		        <span class="cue" data-line="65" data-begin="00:03:24.060" data-end="00:03:28.730">- Dyret klør seg, så Samir. – Den børster seg!</span>
+		        <span class="cue" data-line="66" data-begin="00:03:28.730" data-end="00:03:32.440">- Hen sa: Dyret har kurver på beina.</span>
+		        <span class="cue" data-line="67" data-begin="00:03:32.440" data-end="00:03:36.280">Det samler blomsterstøv. Mat.</span>
+		    </p>
+		    <p data-key="15">
+		        <span class="cue" data-line="68" data-begin="00:03:36.280" data-end="00:03:38.480">Dyret fløy til treet</span>
+		        <span class="cue" data-line="69" data-begin="00:03:38.480" data-end="00:03:40.130">som sto ved stiden av.</span>
+		        <span class="cue" data-line="70" data-begin="00:03:40.130" data-end="00:03:42.190">Der var det grønne blomster.</span>
+		        <span class="cue" data-line="71" data-begin="00:03:42.190" data-end="00:03:43.520">Mange små.</span>
+		    </p>
+		    <p data-key="16">
+		        <span class="cue" data-line="72" data-begin="00:03:43.520" data-end="00:03:45.660">Mellom blomstene var det</span>
+		        <span class="cue" data-line="73" data-begin="00:03:45.660" data-end="00:03:47.700">små grønne krukker med saft.</span>
+		        <span class="cue" data-line="74" data-begin="00:03:47.700" data-end="00:03:51.090">Dyret sugde saft med snabelen sin.</span>
+		        <span class="cue" data-line="75" data-begin="00:03:51.090" data-end="00:03:53.720">- Hunnblomster, sa Hen.</span>
+		        <span class="cue" data-line="76" data-begin="00:03:53.720" data-end="00:03:56.500">- Eller jenter, om du skjønner det bedre.</span>
+		        <span class="cue" data-line="77" data-begin="00:03:56.500" data-end="00:03:58.370">Mye saft.</span>
+		    </p>
+		    <p data-key="17">
+		        <span class="cue" data-line="78" data-begin="00:03:58.370" data-end="00:04:02.330">Jenny så på dyret. Det gule støvet</span>
+		        <span class="cue" data-line="79" data-begin="00:04:02.330" data-end="00:04:07.520">på pelsen ble klint av på de grønne blomstene.</span>
+		        <span class="cue" data-line="80" data-begin="00:04:07.520" data-end="00:04:11.810">Hen sa: -Blomsterstøv fra hannblomst</span>
+		        <span class="cue" data-line="81" data-begin="00:04:11.810" data-end="00:04:16.820">til hunn-blomst. Pollinering. Blir frø.</span>
+		    </p>
+		    <p data-key="18">
+		        <span class="cue" data-line="82" data-begin="00:04:16.820" data-end="00:04:19.050">Dyret fløy vekk.</span>
+		        <span class="cue" data-line="83" data-begin="00:04:19.050" data-end="00:04:22.340">- Nektar i magen og pollen i kurver,</span>
+		        <span class="cue" data-line="84" data-begin="00:04:22.340" data-end="00:04:24.600">sa Hen. - Mat for dyret.</span>
+		        <span class="cue" data-line="85" data-begin="00:04:24.600" data-end="00:04:28.110">Mat for dem som skal bli nye dyr.</span>
+		    </p>
+		    <p data-key="19">
+		        <span class="cue" data-line="86" data-begin="00:04:28.110" data-end="00:04:31.720">Jenny og Samir tok av seg brillene.</span>
+		        <span class="cue" data-line="87" data-begin="00:04:31.720" data-end="00:04:35.160">- Hva var det vi så, sa Samir.</span>
+		        <span class="cue" data-line="88" data-begin="00:04:35.160" data-end="00:04:39.200">- Der er det, smilte Hen og pekte.</span>
+		        <span class="cue" data-line="89" data-begin="00:04:39.200" data-end="00:04:42.130">De så bare ei humle.</span>
+		        <span class="cue" data-line="90" data-begin="00:04:42.130" data-end="00:04:47.500">- He? Vanlig humle og vanlig seljeblomst?</span>
+		    </p>
+		    <p data-key="20">
+		        <span class="cue" data-line="91" data-begin="00:04:47.500" data-end="00:04:52.480">- Vanlig? sa Hen. - Hva er vanlig?</span>
+		        <span class="cue" data-line="92" data-begin="00:04:52.480" data-end="00:04:55.930">Ikke noe å bry seg om, tenker du?</span>
+		        <span class="cue" data-line="93" data-begin="00:04:55.930" data-end="00:05:00.210">Men hvis du ser, virkelig ser,</span>
+		        <span class="cue" data-line="94" data-begin="00:05:00.210" data-end="00:05:02.970">da skjer det merkelige ting.</span>
+		        <span class="cue" data-line="95" data-begin="00:05:02.970" data-end="00:05:05.500">Kanskje du kan se det,</span>
+		        <span class="cue" data-line="96" data-begin="00:05:05.500" data-end="00:05:07.940">uten disse brillene?</span>
+		    </p>
+		    <p data-key="21">
+		        <span class="cue" data-line="97" data-begin="00:05:07.940" data-end="00:05:10.850">Katt sa ingenting.</span>
+		        <span class="cue" data-line="98" data-begin="00:05:10.850" data-end="00:05:13.400">Katt skrudde på skruer og hjul</span>
+		        <span class="cue" data-line="99" data-begin="00:05:13.400" data-end="00:05:15.160">i beltet sitt.</span>
+		        <span class="cue" data-line="100" data-begin="00:05:15.160" data-end="00:05:21.120">Jenny spurte: Men hvorfor kom dere hit?</span>
+		        <span class="cue" data-line="101" data-begin="00:05:21.120" data-end="00:05:25.960">Hen smilte og sa: - Dere får vite det.</span>
+		        <span class="cue" data-line="102" data-begin="00:05:25.960" data-end="00:05:29.600">Siden. Vær tålmodig.</span>
+		        <span class="cue" data-line="103" data-begin="00:05:29.600" data-end="00:05:31.970">Tiden er din venn.</span>
+		    </p>
+		</div><!-- cues -->
+	</div><!-- div.col-xs-12.col-md-4 -->
+
+	<div class="col-xs-12 col-md-4">
+		<div id="captions_output"><p>captions output</p></div>
+	</div><!-- div.col-xs-12.col-md-4 -->
+
+	<div class="col-xs-12 col-md-4">
+		<div id="chapter_output">chapter output</div>
+	</div><!-- div.col-xs-12.col-md-4 -->
+
+</div><!-- div.row -->
+</article>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="mediaelement/build/mediaelement-and-player.min.js"></script>
+<script src="fsnat_media.js"></script>
+	
+</body>
+</html>
