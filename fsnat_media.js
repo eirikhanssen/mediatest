@@ -11,12 +11,60 @@ function time2sec(timestring) {
 	return sec_total;
 }
 
-function showTimes(node) {
-	console.log('begin: ' + time2sec(node.getAttribute('data-begin')));
-}
-
-function updateCues (){
+function updateActiveCues (){
 	$('span.cue').each(function() {
-		console.log(time2sec($( this ).attr('data-begin')));
+		var current_mptime = mejs.players.mep_0.getCurrentTime();
+		var this_cue_begin = time2sec($( this ).attr('data-begin'));
+		var this_cue_end = time2sec($( this ).attr('data-end'));
+		if(this_cue_begin <= current_mptime && current_mptime <= this_cue_end) {
+			if(!$( this ).hasClass("active-cue")) {
+				$( this ).addClass("active-cue");
+			}
+		} else if ($( this ).hasClass('active-cue')) {
+			$( this ).removeClass("active-cue");
+		}
 	});
 }
+
+function updateActiveKeys () {
+	// hvis den ikke har data-begin eller data-end, bruk første element child span sin data-begin og siste element child span sin data-end
+	$('p.key').each(function() {
+			var current_mptime = mejs.players.mep_0.getCurrentTime();
+			var this_key_begin = time2sec($( this ).attr('data-begin'));
+			var this_key_end = time2sec($( this ).attr('data-end'));
+			if(this_key_begin <= current_mptime && current_mptime <= this_key_end) {
+				if(!$( this ).hasClass("active-key")) {
+					$( this ).addClass("active-key");
+
+					$('.cues').animate(
+						{
+          					scrollTop: $( this ).offset().top
+        				}, 1500);
+
+
+				}
+			} else if ($( this ).hasClass('active-key')) {
+				$( this ).removeClass("active-key");
+			}
+		});
+}
+
+function startSync() {
+	// 8 times a second, check the time of the audio clip, and update active-cue class in text.
+	window.setInterval(updateActiveCues, 125);
+	window.setInterval(updateActiveKeys, 125);
+}
+
+function scrollToActiveCue() {
+	$('.cues').animate({
+          scrollTop: $('.active-cue').offset().top
+        }, 1500);
+}
+
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    startSync();
+});
+
+
+
