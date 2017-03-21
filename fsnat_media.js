@@ -26,6 +26,19 @@ function updateActiveCues (){
 	});
 }
 
+function scrollTo(el) {
+	//el.parent().scrollTop(el.offset().top - 30);
+	var scroll_duration = 700;
+	var childPos = el.offset()
+	var parentPos = el.parent().offset()
+	var childOffsetTop = childPos.top - parentPos.top
+
+	$('html, body').animate({
+		scrollTop: childOffsetTop
+		}, scroll_duration);
+	
+}
+
 function updateActiveKeys () {
 	// hvis den ikke har data-begin eller data-end, bruk første element child span sin data-begin og siste element child span sin data-end
 	$('p.key').each(function() {
@@ -35,13 +48,7 @@ function updateActiveKeys () {
 			if(this_key_begin <= current_mptime && current_mptime <= this_key_end) {
 				if(!$( this ).hasClass("active-key")) {
 					$( this ).addClass("active-key");
-
-					$('.cues').animate(
-						{
-          					scrollTop: $( this ).offset().top
-        				}, 1500);
-
-
+					scrollTo($(this));
 				}
 			} else if ($( this ).hasClass('active-key')) {
 				$( this ).removeClass("active-key");
