@@ -1,0 +1,13 @@
+mejs.players.mep_0.tracks[0].entries[0].identifier: "0"
+mejs.players.mep_0.tracks[0].entries[0].start: 0.1
+mejs.players.mep_0.tracks[0].entries[0].stop: 4
+mejs.players.mep_0.tracks[0].entries[0].text: "..cue text.."
+
+mejs.players.mep_0.tracks[0].isLoaded:true
+mejs.players.mep_0.tracks[0].kind: "subtitles"
+mejs.players.mep_0.tracks[0].label: "English"
+mejs.players.mep_0.tracks[0].src: "dist/mediaelement.vtt"
+mejs.players.mep_0.tracks[0].srclang: "en"
+mejs.players.mep_0.tracks[0].trackId: "mep_0_track_0_subtitles_en"
+
+

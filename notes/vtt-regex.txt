@@ -1,0 +1,6 @@
+search
+:(\d\d),(\d\d\d)
+
+replace
+:\1.\2
+
