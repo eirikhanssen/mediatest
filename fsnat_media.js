@@ -39,7 +39,21 @@ function scrollTo(el) {
 	
 }
 
+function syncOtherLang(el, current_playing_lang) {
+	// clear .playing class
+	var current_playing_key = el.getAttribute('data-key');
+	$('p.key').each(function(){
+		$(this).removeClass('playing');
+		if(this.getAttribute('data-key') == current_playing_key) {
+			console.log('playing added: ' + current_playing_key);
+			$(this).addClass('playing');
+		}
+	});
+}
+
 function updateActiveKeys () {
+
+//	var current_playing_lang = $(mejs.players.mep_0.node).parent().getAttribute('data-lang');
 	// hvis den ikke har data-begin eller data-end, bruk første element child span sin data-begin og siste element child span sin data-end
 	$('p.key').each(function() {
 			var current_mptime = mejs.players.mep_0.getCurrentTime();
@@ -53,6 +67,7 @@ function updateActiveKeys () {
 			} else if ($( this ).hasClass('active-key')) {
 				$( this ).removeClass("active-key");
 			}
+//			syncOtherLang(this, current_playing_lang);
 		});
 }
 
