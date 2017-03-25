@@ -1,0 +1,412 @@
+﻿1#
+00:00:00,010 --> 00:00:03,390
+Det kommer et romskip.
+
+2#
+00:00:03,390 --> 00:00:06,520
+Jenny er ei jente.
+
+3
+00:00:06,520 --> 00:00:09,630
+Samir er en gutt.
+
+4
+00:00:09,630 --> 00:00:09,690
+De er venner. Samir er en gutt.
+
+5
+00:00:09,690 --> 00:00:11,500
+De er venner.
+
+6
+00:00:11,500 --> 00:00:11,520
+De har en hage. De er venner.
+
+7
+00:00:11,520 --> 00:00:14,520
+De har en hage.
+
+8#
+00:00:14,520 --> 00:00:17,860
+- Sukkererter er godt, sa Jenny.
+
+9
+00:00:17,860 --> 00:00:22,400
+- Vi kan så frø, så får vi mange.
+
+10
+00:00:22,400 --> 00:00:26,840
+- Kræsj! Brak! Brekk! Knus!
+
+11
+00:00:26,840 --> 00:00:30,180
+Noe stort landet i treet.
+
+12
+00:00:30,180 --> 00:00:32,500
+Det var ei kule.
+
+13
+00:00:32,500 --> 00:00:34,860
+Var den av glass?
+
+14
+00:00:34,860 --> 00:00:37,000
+Var den farlig?
+
+15#
+00:00:37,000 --> 00:00:39,470
+Noe falt ut.
+
+16
+00:00:39,470 --> 00:00:42,700
+En person hang i ei grein.
+
+17
+00:00:42,700 --> 00:00:46,430
+- En rar person, sa Jenny lavt.
+
+18
+00:00:46,430 --> 00:00:50,560
+- Den har lange ører som en rev!
+
+19
+00:00:50,560 --> 00:00:55,420
+- En rar katt, sa Samir stille.
+
+20
+00:00:55,420 --> 00:00:57,900
+- Den har sko!
+
+21#
+00:00:57,900 --> 00:01:00,900
+Personen hoppet ned.
+
+22
+00:01:00,900 --> 00:01:03,520
+Katta hoppet ned.
+
+23
+00:01:03,520 --> 00:01:06,840
+Personen la handa over hjertet sitt
+
+24
+00:01:06,840 --> 00:01:10,520
+og sa: - Ikke vær redde.
+
+25
+00:01:10,520 --> 00:01:13,200
+Vi kommer i fred.
+
+26#
+00:01:13,200 --> 00:01:15,680
+- Jeg heter Hen.
+
+27
+00:01:15,680 --> 00:01:17,870
+Dette er Katt.
+
+28
+00:01:17,870 --> 00:01:20,240
+Vi har reist langt.
+
+29
+00:01:20,240 --> 00:01:22,300
+Vi har reist forbi
+
+30
+00:01:22,300 --> 00:01:26,170
+Neptun, Uranus, Saturn,
+
+31
+00:01:26,170 --> 00:01:28,980
+Jupiter og Mars.
+
+32#
+00:01:28,980 --> 00:01:32,880
+- Hvor kommer dere fra? spurte Samir.
+
+33
+00:01:32,880 --> 00:01:36,020
+- Fra planeten Mo-lo.
+
+34
+00:01:36,020 --> 00:01:37,760
+Vi har vann.
+
+35
+00:01:37,760 --> 00:01:41,310
+Vi kan snakke og forstå alle språk.
+
+36
+00:01:41,310 --> 00:01:45,720
+Sola vår heter Proxima Centauri.
+
+37#
+00:01:45,720 --> 00:01:50,110
+- Den kula der er vel ikke sterk, sa Samir.
+
+38
+00:01:50,110 --> 00:01:52,040
+- Jo, sa Hen.
+
+39
+00:01:52,040 --> 00:01:56,300
+- Den er laget av gzi-gzy fra et fjell.
+
+40
+00:01:56,300 --> 00:02:01,260
+Gzi-gzy betyr mu-lig på deres språk.
+
+41
+00:02:01,260 --> 00:02:04,600
+Vi har reist med mu-lig.
+
+42#
+00:02:04,600 --> 00:02:07,320
+- Ta på disse brillene, sa Hen.
+
+43
+00:02:07,320 --> 00:02:11,040
+- De er laget av fjellet gzi-gzy.
+
+44
+00:02:11,040 --> 00:02:13,610
+Jenny tok på seg brillene.
+
+45
+00:02:13,610 --> 00:02:16,200
+Samir tok på seg brillene.
+
+46#
+00:02:16,200 --> 00:02:20,130
+- Jeg ser et stort dyr! ropte Samir.
+
+47
+00:02:20,130 --> 00:02:23,660
+Det er gult og brunt og har pels!
+
+48
+00:02:23,660 --> 00:02:26,520
+En bjørn som kan fly!
+
+49#
+00:02:26,520 --> 00:02:30,200
+- Nå bader den i en stor blomst!
+
+50
+00:02:30,200 --> 00:02:33,480
+Blomsten drysser gult støv på den!
+
+51
+00:02:33,480 --> 00:02:36,830
+- Støvet er pollen, sa Hen.
+
+52
+00:02:36,830 --> 00:02:39,770
+- Det kommer fra hannblomster.
+
+53
+00:02:39,770 --> 00:02:43,790
+Eller gutter, hvis du skjønner det bedre.
+
+54#
+00:02:43,790 --> 00:02:46,820
+- Nå sitter den på en gul blomst
+
+55
+00:02:46,820 --> 00:02:49,720
+på treet her! sa Jenny og pekte.
+
+56
+00:02:49,720 --> 00:02:54,690
+Det er hundre gule stilker med kuler på.
+
+57
+00:02:54,690 --> 00:02:58,190
+- Kulene har pollen, sa Hen.
+
+58#
+00:02:58,190 --> 00:03:02,020
+- Mellom stilkene er det små grønne krukker,
+
+59
+00:03:02,020 --> 00:03:04,960
+sa Jenny. – Bjørnen har snabel.
+
+60
+00:03:04,960 --> 00:03:08,290
+Nå suger den vann fra de grønne kulene.
+
+61
+00:03:08,290 --> 00:03:13,940
+- Det er sukker-vann, sa Hen. – Nektar. Mat.
+
+62#
+00:03:13,940 --> 00:03:17,670
+- Bjørn med snabel og vinger, lo Samir.
+
+63
+00:03:17,670 --> 00:03:20,050
+- Er det en elefantbjørn?
+
+64
+00:03:20,050 --> 00:03:24,060
+- Blomsten rister gult støv på dyret, sa Jenny.
+
+65
+00:03:24,060 --> 00:03:28,730
+- Dyret klør seg, så Samir. – Den børster seg!
+
+66
+00:03:28,730 --> 00:03:32,440
+- Hen sa: Dyret har kurver på beina.
+
+67
+00:03:32,440 --> 00:03:36,280
+Det samler blomsterstøv. Mat.
+
+68#
+00:03:36,280 --> 00:03:38,480
+Dyret fløy til treet
+
+69
+00:03:38,480 --> 00:03:40,130
+som sto ved stiden av.
+
+70
+00:03:40,130 --> 00:03:42,190
+Der var det grønne blomster.
+
+71
+00:03:42,190 --> 00:03:43,520
+Mange små.
+
+72#
+00:03:43,520 --> 00:03:45,660
+Mellom blomstene var det
+
+73
+00:03:45,660 --> 00:03:47,700
+små grønne krukker med saft.
+
+74
+00:03:47,700 --> 00:03:51,090
+Dyret sugde saft med snabelen sin.
+
+75
+00:03:51,090 --> 00:03:53,720
+- Hunnblomster, sa Hen.
+
+76
+00:03:53,720 --> 00:03:56,500
+- Eller jenter, om du skjønner det bedre.
+
+77
+00:03:56,500 --> 00:03:58,370
+Mye saft.
+
+78#
+00:03:58,370 --> 00:04:02,330
+Jenny så på dyret. Det gule støvet
+
+79
+00:04:02,330 --> 00:04:07,520
+på pelsen ble klint av på de grønne blomstene.
+
+80
+00:04:07,520 --> 00:04:11,810
+Hen sa: -Blomsterstøv fra hannblomst
+
+81
+00:04:11,810 --> 00:04:16,820
+til hunn-blomst. Pollinering. Blir frø.
+
+82#
+00:04:16,820 --> 00:04:19,050
+Dyret fløy vekk.
+
+83
+00:04:19,050 --> 00:04:22,340
+- Nektar i magen og pollen i kurver,
+
+84
+00:04:22,340 --> 00:04:24,600
+sa Hen. - Mat for dyret.
+
+85
+00:04:24,600 --> 00:04:28,110
+Mat for dem som skal bli nye dyr.
+
+86#
+00:04:28,110 --> 00:04:31,720
+Jenny og Samir tok av seg brillene.
+
+87
+00:04:31,720 --> 00:04:35,160
+- Hva var det vi så, sa Samir.
+
+88
+00:04:35,160 --> 00:04:39,200
+- Der er det, smilte Hen og pekte.
+
+89
+00:04:39,200 --> 00:04:42,130
+De så bare ei humle.
+
+90
+00:04:42,130 --> 00:04:47,500
+- He? Vanlig humle og vanlig seljeblomst?
+
+91#
+00:04:47,500 --> 00:04:52,480
+- Vanlig? sa Hen. - Hva er vanlig?
+
+92
+00:04:52,480 --> 00:04:55,930
+Ikke noe å bry seg om, tenker du?
+
+93
+00:04:55,930 --> 00:05:00,210
+Men hvis du ser, virkelig ser,
+
+94
+00:05:00,210 --> 00:05:02,970
+da skjer det merkelige ting.
+
+95
+00:05:02,970 --> 00:05:05,500
+Kanskje du kan se det,
+
+96
+00:05:05,500 --> 00:05:07,940
+uten disse brillene?
+
+97#
+00:05:07,940 --> 00:05:10,850
+Katt sa ingenting.
+
+98
+00:05:10,850 --> 00:05:13,400
+Katt skrudde på skruer og hjul
+
+99
+00:05:13,400 --> 00:05:15,160
+i beltet sitt.
+
+100
+00:05:15,160 --> 00:05:21,120
+Jenny spurte: Men hvorfor kom dere hit?
+
+101
+00:05:21,120 --> 00:05:25,960
+Hen smilte og sa: - Dere får vite det.
+
+102
+00:05:25,960 --> 00:05:29,600
+Siden. Vær tålmodig.
+
+103
+00:05:29,600 --> 00:05:31,970
+Tiden er din venn.
+

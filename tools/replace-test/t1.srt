@@ -1,0 +1,11 @@
+1
+00:00:00,000 --> 00:00:03,320
+Det kommer et romskip.
+
+2
+00:00:03,500 --> 00:00:14,520
+Jenny er ei jente. Samir er en gutt. De er venner. De har en hage.
+
+3
+00:00:14,540 --> 00:00:37,120
+- Sukkererter er godt, sa Jenny. - Vi kan så frø, så får vi mange. - Kræsj! Brak! Brekk! Knus! Noe stort landet i treet. Det var ei kule. Var den av glass? Var den farlig?
