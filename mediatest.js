@@ -45,7 +45,8 @@ var getCurrentSubtitleFromTracks = function (player, kind, srclang, entryIndex) 
 }
 
 var getTranslatedSubtitle = function(player, lang) {
-	return player.getCurrentTime() + ' : ' + getCurrentSubtitleFromTracks(player, 'subtitles', lang, getCurrentEntryIndexFromTracks(player));
+	//return player.getCurrentTime() + ' : ' + getCurrentSubtitleFromTracks(player, 'subtitles', lang, getCurrentEntryIndexFromTracks(player));
+	return getCurrentSubtitleFromTracks(player, 'subtitles', lang, getCurrentEntryIndexFromTracks(player));
 }
 
 $( document ).ready(function() {
@@ -87,12 +88,16 @@ $( document ).ready(function() {
 						
 						$(this).addClass('playing');
 						scrollTo($(this));
-						var translatedCueText = getTranslatedSubtitle(player, 'no');
-						$('#translation').html(translatedCueText);
-						console.log(translatedCueText);
+						
+						//console.log(translatedCueText);
 					}
 				}
 			});
+
+			var translatedCueText = getTranslatedSubtitle(player, 'no');
+			if($('#translation').html() != translatedCueText) {
+				$('#translation').html(translatedCueText);
+			}
 
 		}
 		$(mediaEl).on("playing", function(){
