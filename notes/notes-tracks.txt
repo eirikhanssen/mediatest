@@ -10,4 +10,36 @@ mejs.players.mep_0.tracks[0].src: "dist/mediaelement.vtt"
 mejs.players.mep_0.tracks[0].srclang: "en"
 mejs.players.mep_0.tracks[0].trackId: "mep_0_track_0_subtitles_en"
 
+(player).
 
+tracks[0-n=3].entries[0-n=21].start: 1.0
+                .stop: 2.4
+                .identifier: "1-n"
+                .text "hele cue text for dette segmentet"
+tracks.kind: "captions"
+tracks.label
+tracks.srclang: "so"
+tracks.trackId: "mep_0_track_0_captions_no"
+tracks.trackId: "mep_0_track_2_subtitles_so"
+
+1) finn track med kind=captions og srclang = samme som playeren (no)
+send denne tracken til en funksjon med current time,
+returner identifier til track som er aktiv nå.
+
+2) en funksjon tar tracks, srclang, kind, id
+
+getCurrentSubtitleFromTracks (tracksObj, kind, srclang, currentIdentifier) {
+	for(var i=0; i<tracksObj.length; i++) {
+		var currentTrack = tracksObj[i];
+		if(currentTrack.kind = kind && currentTrack.srclang) {
+			for(var j=0; j<currentTrack.entries.length; j++) {
+				var currentEntry = currentTrack.entries[j];
+				if(currentEntry.identifier = currentIdentifier) {
+					return currentEntry.text;
+				}
+			}
+		}
+	}
+	console.log("no entry match: " + kind + ' : ' + srclang + ' : ' + currentIdentifier);
+	return "";
+} 
