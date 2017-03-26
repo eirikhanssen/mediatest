@@ -13,15 +13,16 @@
 </head>
 
 <body>
-<div class="row">
-<div class="col-md-6">
+<div class="row players players-no ">
+<div class="col-md-6 player player-no">
 	<article class="audio_and_text" data-lang="no">
 <audio id="audio-no" class="mejs__player">
     <source src="mp3_64k/NO_01K.mp3" type="audio/mp3"/>
     <source src="ogg_64k/NO_01K.ogg" type="audio/ogg"/>
-    <track kind="captions" src="vtt/01k.no.vtt" default="default" srclang="no" label="Norsk"/>
-    <track kind="chapters" src="vtt/01k.no.chapters.vtt" srclang="no" label="Norsk"/>
-    <track kind="subtitles" src="vtt/01k.so.vtt" srclang="so" label="Somali"/>
+    <track kind="captions" src="vtt/01k.no.vtt" default="default" srclang="no" label="Norsk Captions"/>
+    <track kind="chapters" src="vtt/01k.no.chapters.vtt" srclang="no" label="Norsk Chapters"/>
+    <track kind="subtitles" src="vtt/01k.so.vtt" srclang="so" label="Somali Subtitles"/>
+    <track kind="subtitles" src="vtt/01k.no.vtt" srclang="no" label="Norsk Subtitles"/>
 </audio>
 
 		<div class="cues">
@@ -169,9 +170,9 @@
 		    </p>
 
 </article>
-</div><!-- .col-md-6 -->
+</div><!-- .col-md-6.player-no-->
 
-<div class="col-md-6">
+<div class="col-md-6 player player-so">
 <article class="audio_and_text" data-lang="so">
 <audio id="audio-so" class="mejs__player">
     <source src="mp3_64k/SO_01K.mp3" type="audio/mp3"/>
@@ -203,9 +204,12 @@
 </div><!-- cues -->
 </article>
 
-</div><!-- div.col-md-6 -->
+</div><!-- div.col-md-6.player-so -->
 
-<div></div>
+<div class="translation-container col-md-6">
+	<div id="translation" class="translation"></div>
+</div>
+
 </div><!-- div.row -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

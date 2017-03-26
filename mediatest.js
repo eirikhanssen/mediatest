@@ -10,6 +10,43 @@ function scrollTo(el) {
 		}, scroll_duration);
 }
 
+var getCurrentEntryIndexFromTracks = function(player) {
+	// the track with the same language as the audio will be of kind = captions
+	// the tracks with other languages than the audio will be of kind = subtitles
+	var tracksObj = player.tracks;
+	var currentTime = player.getCurrentTime();
+	for(var i=0; i<tracksObj.length; i++) {
+		var currentTrack = tracksObj[i];
+		if(currentTrack.kind == "captions") {
+			for(var j=0; j<currentTrack.entries.length; j++) {
+				var currentEntry = currentTrack.entries[j];
+				if((currentTime >= currentEntry.start || (j>0 && currentTime > currentTrack.entries[j-1].stop)) && currentTime <= currentEntry.stop) {
+					return j;
+				}
+			}
+		}
+	}
+	return 0;
+}
+
+var getCurrentSubtitleFromTracks = function (player, kind, srclang, entryIndex) {
+	// tracksObj has several tracks
+	// find the track that is the right kind, has the right srclang
+	// return that track's entry's text matching the entryIndex
+	var tracksObj = player.tracks;
+	for(var i=0; i<tracksObj.length; i++) {
+		var currentTrack = tracksObj[i];
+		if(currentTrack.kind == kind && currentTrack.srclang == srclang) {
+			return entryIndex + ' : ' + currentTrack.entries[entryIndex].text;
+		}
+	}
+	console.log("no entry match: " + kind + ' : ' + srclang + ' : ' + currentIdentifier);
+	return "no entry match: " + kind + ' : ' + srclang + ' : ' + currentIdentifier;
+}
+
+var getTranslatedSubtitle = function(player, lang) {
+	return player.getCurrentTime() + ' : ' + getCurrentSubtitleFromTracks(player, 'subtitles', lang, getCurrentEntryIndexFromTracks(player));
+}
 
 $( document ).ready(function() {
     $('article.audio_and_text').each(function(){
@@ -45,33 +82,39 @@ $( document ).ready(function() {
 					}
 				} else {
 					if(!$(this).hasClass('playing')) {
+						// new cue!
+						// which cue are we at now?
+						
 						$(this).addClass('playing');
 						scrollTo($(this));
+						var translatedCueText = getTranslatedSubtitle(player, 'no');
+						$('#translation').html(translatedCueText);
+						console.log(translatedCueText);
 					}
 				}
 			});
 
 		}
 		$(mediaEl).on("playing", function(){
-			console.log("playing: " + lang);
+			//console.log("playing: " + lang);
 		});
 		$(mediaEl).on("pause", function(){
-			console.log("paused: " + lang);
+			//console.log("paused: " + lang);
 		});
 		$(mediaEl).on("seeking", function(){
-			console.log("seeking: " + lang);
+			//console.log("seeking: " + lang);
 		});
 		$(mediaEl).on("seeked", function(){
-			console.log("seeked: " + lang);
+			//console.log("seeked: " + lang);
 		});
 		$(mediaEl).on("ended", function(){
-			console.log("ended: " + lang);
+			//console.log("ended: " + lang);
 		});
 		$(mediaEl).on("volumechange", function(){
-			console.log("volume of " + lang + ": " + player.getVolume());
+			//console.log("volume of " + lang + ": " + player.getVolume());
 		});
 		$(mediaEl).on("timeupdate", function(){
-			console.log("timeupdate of " + lang + ": " + player.getCurrentTime());
+			//console.log("timeupdate of " + lang + ": " + player.getCurrentTime());
 			updateTextSync();
 			// finn ut hvilken cue som er aktiv
 			// oppdater hvilken cue i andre språk som skal være aktiv/playing
