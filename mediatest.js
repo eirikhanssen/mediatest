@@ -37,7 +37,8 @@ var getCurrentSubtitleFromTracks = function (player, kind, srclang, entryIndex) 
 	for(var i=0; i<tracksObj.length; i++) {
 		var currentTrack = tracksObj[i];
 		if(currentTrack.kind == kind && currentTrack.srclang == srclang) {
-			return entryIndex + ' : ' + currentTrack.entries[entryIndex].text;
+			//return entryIndex + ' : ' + currentTrack.entries[entryIndex].text;
+			return currentTrack.entries[entryIndex].text;
 		}
 	}
 	console.log("no entry match: " + kind + ' : ' + srclang + ' : ' + currentIdentifier);

@@ -123,8 +123,9 @@ article {
 
 .translation {
     font-size: 2em;
-    padding: 1em;
-    background: cyan;
+    font-size: 2rem;
+    padding: 1rem;
+    background: #ffffd1;
     box-sizing: border-box;
     border: 1px dashed gray;
     border-radius: 0.5em;
