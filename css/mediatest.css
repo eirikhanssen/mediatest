@@ -130,3 +130,5 @@ article {
     border: 1px dashed gray;
     border-radius: 0.5em;
 }
+
+.active-cue {background: yellow;}
