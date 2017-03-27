@@ -11,6 +11,26 @@ function time2sec(timestring) {
 				return sec_total;
 			}
 
+function updateCueSync(player,lang) {
+	if(lang=='no') {
+        var mptime = player.getCurrentTime();
+		cues = $('.cue');
+		cues.each(function(){
+			var cue_begin = time2sec($(this).attr('data-begin'));
+        	var cue_end = time2sec($(this).attr('data-end'));
+			if($(this).hasClass('active-cue')) {
+				if(mptime < cue_begin || mptime > cue_end){
+					$(this).removeClass('active-cue');
+				}
+			} else {
+				if(mptime >= cue_begin && mptime <= cue_end) {
+					$(this).addClass('active-cue');
+				}
+			}
+		});
+	}
+}
+
 function scrollTo(el) {
 	//el.parent().scrollTop(el.offset().top - 30);
 	var scroll_duration = 700;
@@ -71,37 +91,8 @@ $( document ).ready(function() {
 		var player = mejs.players[playerId];
 		var mediaEl = $(this).find('audio')[0];
         var that = this;
-		//console.log(mediaEl);
-        
-        var updateCueSync = (function() {
-            var updateCuesNo = function() {
-                $(that).find('.cue').each(function() {
-                    //console.log($(this).attr('data-begin'));
-                    //console.log('cues!')
-                    var cue_begin = time2sec($(this).attr('data-begin'));
-                    var cue_end = time2sec($(this).attr('data-end'));
-                    var current_mptime = player.getCurrentTime();
-                    if(cue_begin <= current_mptime && current_mptime <= cue_end) {
-				        if(!$( this ).hasClass("active-cue")) {
-					       $( this ).addClass("active-cue");
-				        } else if ($( this ).hasClass("active-cue")) {
-                            $( this ).removeClass("active-cue");
-                        }
-                    }
-                });
-            }
-            var dummy = function () {
-                return 0;
-            }
-            if(lang=='no') {
-                return updateCuesNo;
-            }
-        })();
-        
-        
-		function updateTextSync(){
 
-			
+		function updateTextSync(){
 			currentPlayerKeys = $('article[data-lang='+lang+ '] .key');
 			otherPlayersKeys = $('article:not([data-lang='+lang+ ']) .key');
 			currentPlayerKeys.each(function(){
@@ -114,22 +105,16 @@ $( document ).ready(function() {
 					}
 				} else {
 					if(!$(this).hasClass('playing')) {
-						// new cue!
-						// which cue are we at now?
-						
 						$(this).addClass('playing');
 						scrollTo($(this));
-						
-						//console.log(translatedCueText);
 					}
 				}
 			});
             
-			var translatedCueText = getTranslatedSubtitle(player, 'so');
+			var translatedCueText = getTranslatedSubtitle(player, 'no');
 			if($('#translation').html() != translatedCueText) {
 				$('#translation').html(translatedCueText);
 			}
-            
 
 		}
 		$(mediaEl).on("playing", function(){
@@ -153,7 +138,7 @@ $( document ).ready(function() {
 		$(mediaEl).on("timeupdate", function(){
 			//console.log("timeupdate of " + lang + ": " + player.getCurrentTime());
 			updateTextSync();
-            updateCueSync();
+            updateCueSync(player, lang);
 			// finn ut hvilken cue som er aktiv
 			// oppdater hvilken cue i andre språk som skal være aktiv/playing
 			// f.eks .sync-no .sync-so .sync-ar .sync-ti
