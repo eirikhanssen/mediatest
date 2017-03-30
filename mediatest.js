@@ -14,7 +14,7 @@ function time2sec(timestring) {
 function updateCueSync(player,lang) {
 	if(lang=='no') {
         var mptime = player.getCurrentTime();
-		cues = $('.cue');
+		cues = $('.cues span[data-begin]');
 		cues.each(function(){
 			var cue_begin = time2sec($(this).attr('data-begin'));
         	var cue_end = time2sec($(this).attr('data-end'));
@@ -94,7 +94,7 @@ $( document ).ready(function() {
 
 		function updateTextSync(){
 			currentPlayerKeys = $('article[data-lang='+lang+ '] .key');
-			otherPlayersKeys = $('article:not([data-lang='+lang+ ']) .key');
+			//otherPlayersKeys = $('article:not([data-lang='+lang+ ']) .key');
 			currentPlayerKeys.each(function(){
 				var begin=time2sec($(this).attr('data-begin'));
 				var end=time2sec($(this).attr('data-end'));
@@ -111,7 +111,7 @@ $( document ).ready(function() {
 				}
 			});
             
-			var translatedCueText = getTranslatedSubtitle(player, 'no');
+			var translatedCueText = getTranslatedSubtitle(player, 'so');
 			if($('#translation').html() != translatedCueText) {
 				$('#translation').html(translatedCueText);
 			}
