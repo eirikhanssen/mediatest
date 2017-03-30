@@ -6,7 +6,7 @@ import re
 # print 'Argument list:', str(sys.argv)
 
 f=open(sys.argv[1], 'r')
-cuecounter=0
+cuecounter=1
 timecode_search = re.compile("\d+:\d+:\d+")
 cueid_search=re.compile("^\d+$")
 timecode_fix=re.compile("([^,]+),([^,]+),([^,]+)")

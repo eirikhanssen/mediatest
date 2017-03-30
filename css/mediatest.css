@@ -75,7 +75,7 @@ article.audio_and_text .cues {
     margin: 1em;
 }
 
-p.key {
+.key {
     display: block;
     padding: .5rem;
     box-sizing: border-box;
@@ -83,12 +83,11 @@ p.key {
     border-radius: .25em;
 }
 
-p.playing {
+.playing {
     border-color: gray;
 }
 
-p.active-key {
-    display: block;
+.active-key {
     border-color: gray;
 }
 
@@ -98,6 +97,9 @@ article {
     position: relative;
 }
 
+.key p {margin-top:0; margin-bottom:0;}
+
+.key p+p {margin-top: .3em;}
 
 /*hide and show players*/
 
@@ -129,6 +131,7 @@ article {
     box-sizing: border-box;
     border: 1px dashed gray;
     border-radius: 0.5em;
+
 }
 
 .active-cue {background-color: yellow;}

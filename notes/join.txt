@@ -1,0 +1,3 @@
+# this is a comment
+file './ar01l-v03-del1.mp3'
+file './ar01l-v03-del2.mp3'

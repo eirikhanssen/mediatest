@@ -42,4 +42,6 @@ getCurrentSubtitleFromTracks (tracksObj, kind, srclang, currentIdentifier) {
 	}
 	console.log("no entry match: " + kind + ' : ' + srclang + ' : ' + currentIdentifier);
 	return "";
-} 
+}
+
+

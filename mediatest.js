@@ -83,6 +83,23 @@ var getTranslatedSubtitle = function(player, lang) {
 	return getCurrentSubtitleFromTracks(player, 'subtitles', lang, getCurrentEntryIndexFromTracks(player));
 }
 
+function getCurrentCueId(player, lang) {
+ 	var tracks = player.tracks;
+
+ 	var currentTime = player.getCurrentTime();
+ 	for (var i = 0; i < tracks.length; i++) {
+ 		var currentTrack = tracks[i];
+		if(currentTrack.kind == "captions" && currentTrack.srclang == lang) {	
+			for(var j=0; j<currentTrack.entries.length; j++) {
+				var currentEntry = currentTrack.entries[j];
+				if(currentTime >= currentEntry.start && currentTime <= currentEntry.stop) {
+					return currentEntry.identifier;
+				}
+			}
+		} 	       		
+ 	}       	
+}
+
 $( document ).ready(function() {
     $('article.audio_and_text').each(function(){
 
@@ -93,13 +110,11 @@ $( document ).ready(function() {
         var that = this;
 
 		function updateTextSync(){
+			//console.log('updateTextSync');
 			currentPlayerKeys = $('article[data-lang='+lang+ '] .key');
-			//otherPlayersKeys = $('article:not([data-lang='+lang+ ']) .key');
 			currentPlayerKeys.each(function(){
-				var begin=time2sec($(this).attr('data-begin'));
-				var end=time2sec($(this).attr('data-end'));
-				var currentTime=player.getCurrentTime();
-				if(currentTime < begin || currentTime > end) {
+				var currentCueId = getCurrentCueId(player,lang) || 1;
+				if($(this).attr('data-key') != currentCueId) {
 					if($(this).hasClass('playing')) {
 						$(this).removeClass('playing');
 					}
@@ -111,7 +126,7 @@ $( document ).ready(function() {
 				}
 			});
             
-			var translatedCueText = getTranslatedSubtitle(player, 'so');
+			var translatedCueText = getTranslatedSubtitle(player, 'no');
 			if($('#translation').html() != translatedCueText) {
 				$('#translation').html(translatedCueText);
 			}
@@ -119,6 +134,8 @@ $( document ).ready(function() {
 		}
 		$(mediaEl).on("playing", function(){
 			//console.log("playing: " + lang);
+			updateTextSync();
+			updateCueSync(player, lang);
 		});
 		$(mediaEl).on("pause", function(){
 			//console.log("paused: " + lang);

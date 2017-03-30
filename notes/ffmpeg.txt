@@ -1,0 +1,17 @@
+for f in *; do ffmpeg -i $f -vn -c:a libvorbis -ar 44100 -ac 1 -b:a 64k ../ogg_64k/$f.ogg; done
+
+for f in *; do ffmpeg -i $f -vn -ar 44100 -ac 1 -ab 64k -f mp3 ../64k_mono/$f; done
+for f in *; do ffmpeg -i $f -vn -ar 44100 -ac 1 -ab 64k -f mp3 ../64k_mono/$f; done
+
+
+for f in ./NO_00*.mp3; do ffmpeg -i $f -vn -ar 44100 -ac 1 -ab 64k -f mp3 ../mp3_64k/$f; done
+for f in ./NO_00*.mp3; do ffmpeg -i $f -vn -c:a libvorbis -ar 44100 -ac 1 -b:a 64k ../ogg_64k/$f.ogg; done
+
+crop audio til første 376 sekunder:
+ffmpeg -t 376 -i ar01l-v02.mp3 -acodec copy ar01l-v03-del1.mp3
+
+discard første 377.5 sekunder
+ffmpeg -ss 377.5 -i ar01l-v02.mp3 -acodec copy ar01l-v03-del2.mp3
+
+join to lydfiler:
+ffmpeg -f concat -safe 0 -i join.txt -c copy ar01l-v03.mp3
