@@ -126,7 +126,7 @@ $( document ).ready(function() {
 				}
 			});
             
-			var translatedCueText = getTranslatedSubtitle(player, 'no');
+			var translatedCueText = getTranslatedSubtitle(player, 'ar');
 			if($('#translation').html() != translatedCueText) {
 				$('#translation').html(translatedCueText);
 			}
